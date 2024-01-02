@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           DASCEL CAKE SHOP | FINAL WEBSITE
+        </title>
+        <link rel="stylesheet" href="indexstyle.css" />
+        <link rel="icon" type="image/x-icon" href="dascelCakes_logo.png" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Teko&family=Lilita+One&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="https://www.facebook.com/dascelcakes" target="_blank"><img src="dascelCakes_logo.png" alt="dascel cakes logo" width="85" height="85"/></a></div>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="custom.html">Custom Cakes</a></li>
+                </ul>
+                <a href="menu.html" target="_blank" class="action_btn">Get Started</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+                <div class="dropdown_menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="custom.html">Custom Cakes</a></li>
+                    <li><a href="menu.html" target="_blank" class="action_btn">Get Started</a></li>
+            </div>
+        </header>
+
+        <main>
+            <section id="home">
+                <h1>DASCEL CAKE SHOP</h1>
+
+                <p>Immerse yourself in a visual feast of our cake shop website, <br> where every click unveils a gallery
+                    exquisite cakes adorned <br> with diverse designs and artistic flair. From elegant <br> wedding cakes
+                    to whimsical birthday creations, <br> our collection showcases the artistry and delectable <br>
+                    craftmanship that  define our confectionery delights.</p>
+                
+                <button class="btn">
+                    <a href="custom.html" target="_blank">FIND OUT MORE</a>
+                </button>
+            </section>        
+        </main>
+
+        <footer class="contact">
+            <div class="container">
+                <h2>CONTACT US</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-form">
+                        <h3>SEND US A MESSAGE</h3>
+                        <form onsubmit="return false" id="inputs">
+                            <div class="form-group">Full Name
+                                <input type="text" name="name" id="myForm">
+                            </div>
+                            <div class="form-group">Email
+                                <input type="email" name="email" id="myForm">
+                            </div>
+                            <div class="form-group">Contact Number
+                                <input type="contact number" name="number" id="myForm">
+                            </div>
+                            <div class="form-group">Message
+                                <textarea class="msg" name="message" id="myForm"></textarea>
+                            </div>
+                            <button href="#" class="btn2" type="submit" onclick="openPopup()">SUBMIT</button>
+                            <div class="popup" id="popup">
+                                <img src="check.png">
+                                <h2>Success!</h2>
+                                <p>Your message has been successfully submitted. Thank you!</p>
+                                <button type="button" onclick="closePopup()">OK</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>ABOUT ME</h3>
+                        <p class="info">Good day, I am EJ Faye Dulay, an aspiring programmer and web designer. This website is designed for educational
+                            purposes in my Computer Science project. It provides insights into the world of cake shops. Whether you're a budding baker,
+                            a curious customer, or simply love all things sweet, explore our site to learn more about the art and science of cake making. 
+                            To easily reach out and connect with me, please find my contact information below:</p>
+                        <div class="desktop_icon"><p><a href="mailto: ejfaye.dulay@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
+                            <a href="https://www.facebook.com/ejfaye.remmy"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                            <a href="https://www.instagram.com/ppeyyyy___/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                            <a href="https://t.me/+E7elGR89rcowYTJl"><i class="fa-brands fa-telegram fa-lg"></i></a>
+                            <a href="https://github.com/peeyyy"><i class="fa-brands fa-github fa-lg"></i></a>
+                        </p></div>
+                        <div class="mobile_icon">
+                            <p><a href="mailto: ejfaye.dulay@gmail.com"><i class="fas fa-envelope fa"></i></a>
+                                <a href="https://www.facebook.com/ejfaye.remmy"><i class="fa-brands fa-facebook fa"></i></a>
+                                <a href="https://www.instagram.com/ppeyyyy___/"><i class="fa-brands fa-instagram fa"></i></a>
+                                <a href="https://t.me/+E7elGR89rcowYTJl"><i class="fa-brands fa-telegram fa"></i></a>
+                                <a href="https://github.com/peeyyy"><i class="fa-brands fa-github fa"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+            
+            let popup = document.getElementById("popup");
+            let inputs = document.getElementById("inputs");
+
+            function openPopup(){
+                popup.classList.add("open-popup");
+                inputs.reset();
+            }
+            function closePopup(){
+                popup.classList.remove("open-popup");
+            }    
+        </script>
+    </body>
+</html>
